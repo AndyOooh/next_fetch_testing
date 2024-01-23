@@ -15,7 +15,7 @@ export default async function CountriesPage({}: Props) {
         <Link href='/'>Back to Home</Link>
       </h2>
       <br />
-      {countries.map(country => {
+      {countries.map((country: any) => {
         return (
           <>
             <p key={country.id}>
