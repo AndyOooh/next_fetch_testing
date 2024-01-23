@@ -19,7 +19,7 @@ export default async function CountriesPage({}: Props) {
         return (
           <>
             <p key={country.id}>
-              <Link href={`/users/${country.id}`}>{country.name}</Link>
+              <Link href={`/countries/${country.id}`}>{country.name}</Link>
             </p>
             <br />
           </>
