@@ -14,14 +14,15 @@ export default async function CountriesPage({}: Props) {
         <Link href='/'>Back to Home</Link>
       </h2>
       <br />
-      {countries.map((country: any) => {
+      {countries.map((country: any, index: number) => {
         return (
-          <>
-            <p key={country.id}>
+          //   <div key={country.id + index}>
+          <div key={country.id}>
+            <p>
               <Link href={`/countries/${country.id}`}>{country.name}</Link>
             </p>
             <br />
-          </>
+          </div>
         );
       })}
     </section>
