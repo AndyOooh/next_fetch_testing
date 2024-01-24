@@ -6,10 +6,9 @@ type Props = {};
 
 export default async function CountriesPage({}: Props) {
   const countries = await getAllCountries();
-  console.log('🚀  countries:', countries);
 
   return (
-    <section>
+    <section className='min-h-screen'>
       <h1>Countries Page</h1>
       <h2>
         <Link href='/'>Back to Home</Link>
