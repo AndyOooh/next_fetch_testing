@@ -5,8 +5,12 @@ type Props = {
 };
 
 function CountryPage({ params }: Props) {
-  console.log('🚀  params:', params)
-  return <div>page</div>;
+  console.log('🚀  params:', params);
+  return (
+    <div>
+      <h1>CountryPage</h1>
+    </div>
+  );
 }
 
 export default CountryPage;
