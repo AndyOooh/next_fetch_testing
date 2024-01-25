@@ -21,8 +21,8 @@ export default async function CountryPage({ params }: Props) {
   //   console.log('🚀  country:', country);
 
   return (
-    <div className='min-h-screen w/full'>
-      <h1>CountryPage</h1>
+    <div className='min-h-screen w-full flex flex-col justify-between items-center'>
+      <h1 className='text-4xl'>CountryPage</h1>
       <h2>{country.name}</h2>
       <SomeComp />
     </div>

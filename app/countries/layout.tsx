@@ -20,12 +20,12 @@ export default async function CountriesLayout({
         {countries.map((country: any) => {
           return (
             <div key={country.id}>
-              <Link href={`/countries/${country.id}`}>{country.name}</Link>
+              <Link href={`/countries/${country.id}`} className='link'>{country.name}</Link>
             </div>
           );
         })}
       </section>
-      <section className='bor1'>{children}</section>
+      <section className='bor1 w-full'>{children}</section>
     </div>
   );
 }
