@@ -15,4 +15,6 @@ body {
   }
 }
 
-bor1 
+bor1 {
+  border: 2px solid cyan;
+}
