@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getAllCountries } from '../services/getAllCountries';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Countries Layout',
@@ -15,7 +16,15 @@ export default async function CountriesLayout({
 
   return (
     <div className='flex'>
-      <section className='w-1/5'></section>
+      <section className='w-1/5 flex flex-col gap-2'>
+        {countries.map((country: any) => {
+          return (
+            <div key={country.id}>
+              <Link href={`/countries/${country.id}`}>{country.name}</Link>
+            </div>
+          );
+        })}
+      </section>
       <section className='bor1'>{children}</section>
     </div>
   );
