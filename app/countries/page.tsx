@@ -6,25 +6,13 @@ type Props = {};
 
 export default async function CountriesPage({}: Props) {
   const countries = await getAllCountries();
-  console.log('🚀  countries:', countries);
 
   return (
-    <section>
+    <div className='min-h-screen'>
       <h1>Countries Page</h1>
       <h2>
         <Link href='/'>Back to Home</Link>
       </h2>
-      <br />
-      {countries.map((country: any) => {
-        return (
-          <>
-            <p key={country.id}>
-              <Link href={`/countries/${country.id}`}>{country.name}</Link>
-            </p>
-            <br />
-          </>
-        );
-      })}
-    </section>
+    </div>
   );
 }
