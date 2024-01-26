@@ -16,14 +16,18 @@ export const generateStaticParams = async () => {
 };
 
 export default async function CountryPage({ params }: Props) {
-  console.log('🚀  params:', params);
+  console.log('🚀 params:', params);
   const country = await getCountry(params.countryId);
-  //   console.log('🚀  country:', country);
+  console.log('🚀  country:', country);
 
   return (
     <div className='min-h-screen w-full flex flex-col justify-between items-center'>
       <h1 className='text-4xl'>CountryPage</h1>
-      <h2>{country.name}</h2>
+      <div>
+        <h2>{country.name}</h2>
+        <h2>{country.username}</h2>
+      </div>
+
       <SomeComp />
     </div>
   );
