@@ -16,11 +16,13 @@ export default async function CountriesLayout({
 
   return (
     <div className='flex'>
-      <section className='w-1/5 flex flex-col gap-2 justify-center items-center'>
+      <section className='w-1/5 flex flex-col gap-2 justify-center items-center border border-cyan-300'>
         {countries.map((country: any) => {
           return (
             <div key={country.id}>
-              <Link href={`/countries/${country.id}`} className='link'>{country.name}</Link>
+              <Link href={`/countries/${country.id}`} className='link'>
+                {country.name}
+              </Link>
             </div>
           );
         })}
