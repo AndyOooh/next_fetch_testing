@@ -15,6 +15,14 @@ export const generateStaticParams = async () => {
   }));
 };
 
+export const generateMetadata = async ({ params }: Props) => {
+  const country = await getCountry(params.countryId);
+  return {
+    title: country.name,
+    description: `This is the page of ${country.name}`,
+  };
+};
+
 export default async function CountryPage({ params }: Props) {
   console.log('🚀 params:', params);
   const country = await getCountry(params.countryId);
